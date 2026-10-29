@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "api-resilience"
+version = "1.0.0"
+description = "Robust decorators for automatic retry with exponential backoff and jitter to handle transient network errors and API rate limits."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "Your Name", email = "you@example.com" },
+]
+keywords = ["retry", "backoff", "resilience", "api", "decorator", "rate-limit"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/api-resilience"
+Repository = "https://github.com/your-username/api-resilience"
+Issues = "https://github.com/your-username/api-resilience/issues"
+
+[project.optional-dependencies]
+requests = ["requests>=2.20.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/api_resilience"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
